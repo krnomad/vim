@@ -5,6 +5,8 @@ set shiftwidth=4
 set textwidth=100
 set expandtab
 set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+"set mouse=a             " hold shift to copy xterm
+"set ttymouse=xterm2     " necessary for gnu screen & mouse
 set nocindent
 
 set nocompatible
@@ -19,14 +21,14 @@ Bundle 'git://git.wincent.com/command-t.git'
 " jwkang2 python plugin
 Plugin 'https://github.com/davidhalter/jedi-vim.git'
 filetype plugin indent on     " required!
-" "
-" " file explore
+" NERDTree - file explore
 Plugin 'https://github.com/scrooloose/nerdtree.git'
-" " tag list
-Plugin 'taglist.vim'
-" "
-" " python syntax
-Plugin 'python.vim'
+" taglist - see tag lists
+Plugin 'https://github.com/vim-scripts/taglist.vim.git'
+" SrcExpl - source explore
+Plugin 'https://github.com/wesleyche/SrcExpl.git'
+" python syntax
+Plugin 'https://github.com/hdima/python-syntax.git'
 syntax on
 " "
 " " run python
@@ -45,11 +47,13 @@ set paste
 " ctrl+k <character> let you know string for map command
 map <F3> :TlistToggle<CR>
 map <F4> :NERDTreeToggle<CR>
+map <F5> :SrcExplToggle<CR> 
 
 "========================================================================================================
 
 "ctags
 "set tags=/home/jwkang2/work/src/g5/base_0103/humax/humaxtv/apps/humaxtv/octo/tags
+nnoremap <C> <C-]>
 
 "cscope
 set csprg=/usr/bin/cscope
@@ -95,3 +99,23 @@ map <leader>r :NERDTreeFind<cr>
 "========================================================================================================
 
 
+"========================================================================================================
+"SrcExpl
+let g:SrcExpl_updateTagsCmd="$(pwd)"
+"for update tag automatically
+"let g:SrcExpl_updateTagsCmd="ctags --sort=foldcase -R ." 
+
+let g:SrcExpl_pluginList = [ 
+        \ "__Tag_List__", 
+        \ "_NERD_tree_" 
+    \ ]
+
+" // Set 'Enter' key to jump into the exact definition context 
+let g:SrcExpl_jumpKey = "<ENTER>" 
+
+" // Set the height of Source Explorer window 
+let g:SrcExpl_winHeight = 8 
+
+" // Set 100 ms for refreshing the Source Explorer 
+let g:SrcExpl_refreshTime = 100 
+"========================================================================================================

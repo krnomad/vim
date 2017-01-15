@@ -20,3 +20,12 @@ my own vimrc + vundle plugin
         filetype plugin indent on
 
 2. :PluginInstall
+
+3. install packages for develop enviromnet 
+   ctags, cscope
+
+4. copy mkscope.sh to /usr/bin for cscope
+
+# etc
+## secureCRT
+   let send scroll wheel events to remote enabled in the Terminal category of Session Options
