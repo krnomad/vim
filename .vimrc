@@ -21,6 +21,9 @@ Bundle 'git://git.wincent.com/command-t.git'
 
 " jwkang2 python plugin
 Plugin 'https://github.com/davidhalter/jedi-vim.git'
+Plugin 'https://github.com/vim-scripts/AutoComplPop.git'
+Plugin 'Shougo/neocomplcache'
+
 filetype plugin indent on     " required!
 " NERDTree - file explore
 Plugin 'https://github.com/scrooloose/nerdtree.git'
