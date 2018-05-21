@@ -5,6 +5,7 @@ my own vimrc + vundle plugin
 
 1. setup bundle (vim plugin manager)
    git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle
+   copy .vimrc to ~/
     
     Reference 
         (in ~/.vimrc, below commands make it possible to install bundle plugin tool
@@ -19,10 +20,11 @@ my own vimrc + vundle plugin
          
         filetype plugin indent on
 
-2. :PluginInstall
+2. vim +PluginInstall +qall
 
 3. install packages for develop enviromnet 
    ctags, cscope
+   sudo apt-get install ctags cscope
 
 4. copy mkscope.sh to /usr/bin for cscope
 
