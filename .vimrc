@@ -12,19 +12,25 @@ set nocindent
 
 set nocompatible
 filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim' "required
+Plugin 'tpope/vim-fugitive' "required
+call vundle#end()
+filetype plugin indent on " Put your non-Plugin stuff after this line
 
 set rtp+=~/.vim/bundle/vundle/
 
 call vundle#rc()
 Bundle 'gmarik/vundle'
-Bundle 'git://git.wincent.com/command-t.git'
+" Bundle 'git://git.wincent.com/command-t.git'
 
 " jwkang2 python plugin
 Plugin 'https://github.com/davidhalter/jedi-vim.git'
 Plugin 'https://github.com/vim-scripts/AutoComplPop.git'
 Plugin 'Shougo/neocomplcache'
 
-filetype plugin indent on     " required!
+" filetype plugin indent on     " required!
 " NERDTree - file explore
 Plugin 'https://github.com/scrooloose/nerdtree.git'
 " taglist - see tag lists
@@ -35,7 +41,7 @@ Plugin 'https://github.com/wesleyche/SrcExpl.git'
 Plugin 'https://github.com/hdima/python-syntax.git'
 " FuzzyFinder
 Plugin 'https://github.com/vim-scripts/L9.git'
-Plugin 'https://github.com/vim-scripts/FuzzyFinder.git'
+" Plugin 'https://github.com/vim-scripts/FuzzyFinder.git'
 syntax on
 " "
 " " run python
