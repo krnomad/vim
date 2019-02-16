@@ -1,33 +1,36 @@
-# vim
-my own vimrc + vundle plugin
+# How to install
 
-# pre-requirement
+1. clone repository
+```bash
+git clone https://github.com/jwkang/vim.git ~/vim
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
 
-1. setup bundle (vim plugin manager)
-   git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle
-   copy .vimrc to ~/
-    
-    Reference 
-        (in ~/.vimrc, below commands make it possible to install bundle plugin tool
-        set nocompatible
-        filetype off
-         
-        set rtp+=~/.vim/bundle/vundle/
-         
-        call vundle#rc()
-        Bundle 'gmarik/vundle'
-        Bundle 'git://git.wincent.com/command-t.git'
-         
-        filetype plugin indent on
+2. copy .vimrc (optianl - backup your vimrc)
+```bash
+cp ~/vim/.vimrc ~/
+```
 
-2. vim +PluginInstall +qall
+3. run install script
+```bash
+pushd ~/vim; ./install_my_vimrc.sh; popd
+```
 
-3. install packages for develop enviromnet 
-   ctags, cscope
-   sudo apt-get install ctags cscope
+4. Install pakcages (ctags, cscope)
+```bash
+sudo apt-get install ctags cscope -y
+```
+5. Copy mkscope.sh to `/usr/bin/`
+```
+sudo cp ~/vim/mkscope.sh /usr/bin
+```
 
-4. copy mkscope.sh to /usr/bin for cscope
-
-# etc
-## secureCRT
-   let send scroll wheel events to remote enabled in the Terminal category of Session Options
+# Summery
+```
+git clone https://github.com/jwkang/vim.git ~/vim
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+cp ~/.vimrc ~/.vimrc.old;cp ~/vim/.vimrc ~/
+pushd ~/vim; ./install_my_vimrc.sh; popd
+sudo apt-get install ctags cscope -y
+sudo cp ~/vim/mkscope.sh /usr/bin
+```
