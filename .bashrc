@@ -249,8 +249,8 @@ function _install()
 	fastboot -s tcp:$1 erase eio
 	fastboot -s tcp:$1 flash bootloader ./bootloader.prod.img
 	fastboot -s tcp:$1 flash boot ./boot.img
-	fastboot -s tcp:$1 flash system_i ./system.img
-	fastboot -s tcp:$1 flash vendor_i ./vendor.img
+	fastboot -s tcp:$1 flash system ./system.img
+	fastboot -s tcp:$1 flash vendor ./vendor.img
 	fastboot -s tcp:$1 flash cache ./cache.img
 	fastboot -s tcp:$1 flash userdata ./userdata.img
 	fastboot -s tcp:$1 reboot
