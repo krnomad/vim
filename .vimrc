@@ -13,10 +13,10 @@ set nocindent
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim' "required
-Plugin 'tpope/vim-fugitive' "required
-call vundle#end()
+"call vundle#begin()
+"Plugin 'gmarik/Vundle.vim' "required
+"Plugin 'tpope/vim-fugitive' "required
+"call vundle#end()
 filetype plugin indent on " Put your non-Plugin stuff after this line
 
 set rtp+=~/.vim/bundle/vundle/
@@ -61,6 +61,8 @@ au Bufenter *.py set et " can do specific file type
 map <F3> :TlistToggle<CR>
 map <F4> :NERDTreeToggle<CR>
 map <F5> :SrcExplToggle<CR> 
+
+let Tlist_WinWidth = 40
 
 " leader key mapping : if being get accustomed, remove things below,
 let mapleader = "`"
@@ -220,3 +222,8 @@ nmap ,csd :call Csd()<cr>
 nmap ,csg :call Csg()<cr>
 
 "========================================================================================================
+"
+
+"cs add /home/jwkang2/work/android/sessionSourceTester/cscope.out
+"cs add /home/jwkang2/work/android/os4000ha_1004/vendor/broadcom/refsw/cscope.out
+
